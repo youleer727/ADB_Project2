@@ -1,12 +1,21 @@
 # ISE
 
-### Group UNI
+### Group Members
+| Name          | UNI           |
+| ------------- | ------------- |
+| Yi Qi	        | yq2211        |
+| Xiyan Liu     | xl2672        |
 
 ### List of files
 
 * __parser.py__: conduct NLP parsing and tuple retrieving
 * __gsearch.py__: call Google searching API and extract text of returned documents
-* __main.py__: main logics
+* __main.py__: main logics to run the code
+* makefile: initiate the make shortcut
+* vm_start.sh: shell file to run all commands in shell
+* requirements.txt: all dependencies we need to install
+* data.py
+* NLPCore.py
 
 ### Dependencies and platforms
 * Platform: Google Cloud VM, Ubuntu 16.04, **Note that Ubuntu 14.04 is not sufficient to run this program**
