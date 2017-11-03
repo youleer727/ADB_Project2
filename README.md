@@ -71,5 +71,5 @@ positional arguments:
 
 ### Keys
 
-* API: 
-* Search engine: 
+* API Key: AIzaSyAoAvsVDtbehJVan9Pwp_0nI-wWLICamzk
+* Search engine ID: 005549065505939013345:yty6lsl3y9y
