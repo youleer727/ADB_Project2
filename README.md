@@ -8,9 +8,8 @@
 * __gsearch.py__: call Google searching API and extract text of returned documents
 * __main.py__: main logics
 
-### Prerequisites and usage
-
-* Platform: Google Cloud VM, Ubuntu 14.04
+### Dependencies and platforms
+* Platform: Google Cloud VM, Ubuntu 16.04, **Note that Ubuntu 14.04 is not sufficient to run this program**
 * [Stanford CoreNLP software suite](https://stanfordnlp.github.io/CoreNLP/)
     * install [Java 8](http://ubuntuhandbook.org/index.php/2015/01/install-openjdk-8-ubuntu-14-04-12-04-lts/)
     * to download the Stanford CoreNLP jar packages, go to the working directory and run `sudo wget http://nlp.stanford.edu/software/stanford-corenlp-full-2017-06-09.zip`
@@ -20,14 +19,34 @@
     * install by running `sudo pip install tika`
 * __googleapiclient.discovery__, Google Search API
 * __argparse__, argument parsing
-* Main function help message:
 
+### Running instructions and Ubuntu deployment
+
+To deploy onto Ubuntu 16.04 VM, on Ubuntu shell:
+```sh
+$ sudo apt-get update
+$ sudo apt-get install git
+$ git clone https://github.com/youleer727/ADB_Project2.git
+$ cd ADB_Project2
+$ bash vm_start.sh
 ```
-$ python main.py -h
-usage: main.py [-h] api engine relation threshold query nr_tuples
 
-Iterative Set Expansion
+To run paradigm "bill gates microsoft" query, simply use makefile
 
+```sh
+$ make run
+```
+
+This will automatically run paradigm query, you can also customize the query:
+
+```sh
+python main.py <api> <engine> <relation> <threshold> <query> <tuples>
+```
+
+Example:
+```sh
+$ python main.py AIzaSyAoAvsVDtbehJVan9Pwp_0nI-wWLICamzk 005549065505939013345:yty6lsl3y9y 4 0.35 "bill gates microsoft" 10
+```
 positional arguments:
   api         Google search API key
   engine      Google search engine ID
@@ -35,10 +54,6 @@ positional arguments:
   threshold   minimal confidence for tuples to be selected, (0, 1]
   query       initial query string, double quoted if there are multiple words
   nr_tuples   number of tuples to be selected
-
-optional arguments:
-  -h, --help  show this help message and exit
-```
 
 ### Overall design
 
