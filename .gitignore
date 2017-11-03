@@ -1,0 +1,8 @@
+.DS_Store
+*.pyc
+.idea/*
+.vscode/*
+props.properties
+input.txt
+input.txt.xml
+__pycache__/*
