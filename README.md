@@ -40,7 +40,7 @@ $ make run
 This will automatically run paradigm query, you can also customize the query:
 
 ```sh
-python main.py <api> <engine> <relation> <threshold> <query> <tuples>
+$ python main.py <api> <engine> <relation> <threshold> <query> <tuples>
 ```
 
 Example:
